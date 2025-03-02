@@ -3,6 +3,10 @@
 A simple Neovim plugin for encoding and decoding text.
 Supports Base64, Base64URL and URL-encoding (percent-encoding).
 
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/c0261a85-c860-48a3-9d93-fe4240308414" />
+</div>
+
 ## Features
 
 - Encode and decode:
