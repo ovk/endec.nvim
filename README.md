@@ -77,8 +77,19 @@ the plugin will try to keep it at same five lines, but the lines will be shorter
 
 The default configuration options are specified and documented [here](https://github.com/ovk/endec.nvim/blob/main/lua/endec/config.lua).
 
-By default, all key mappings for all encodings are enabled, but any default mapping can be disabled by setting the corresponding mapping to and empty string
+By default, all key mappings for all encodings are enabled, but any default mapping can be disabled by setting the corresponding mapping to an empty string
 (for example - `encode_url_inplace = ""`).
+
+To disable *all* default key mappings set `keymaps.defaults = false` in the config.
+Individual mappings can then be specified as desired, for example:
+
+```lua
+keymaps = {
+    defaults = false,
+
+    encode_base64_inplace = "gB"
+}
+```
 
 ### Default Key Mappings
 

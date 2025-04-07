@@ -4,6 +4,9 @@ local config = {
     -- Key mappings.
     -- Set any mapping to empty string to disable it.
     keymaps = {
+        -- Set to `false` to disable all default mappings.
+        defaults = true,
+
         -- Decode Base64 in-place (normal mode)
         decode_base64_inplace = "gyb",
 
@@ -122,6 +125,10 @@ end
 --- @param cfg table
 M.setup = function(cfg)
     check_unknown_keys(cfg)
+
+    if cfg.keymaps ~= nil and cfg.keymaps.defaults == false then
+        config.keymaps = {}
+    end
 
     local new = vim.tbl_deep_extend("force", {}, config, cfg or {})
 

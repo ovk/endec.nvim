@@ -109,7 +109,7 @@ M.setup = function()
     }
 
     for _, mapping in ipairs(keymaps) do
-        if #mapping.lhs > 0 then
+        if mapping.lhs ~= nil and #mapping.lhs > 0 then
             vim.keymap.set("n", mapping.lhs, mapping.normal, { desc = mapping.name })
             vim.keymap.set("x", mapping.lhs, mapping.visual, { desc = mapping.name, silent = true })
         end
